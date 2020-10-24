@@ -1,0 +1,70 @@
+#blog-list {
+
+    .container {
+        padding: 0;
+    }
+
+    .jumbotron {
+        background-color: beige;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        grid-gap: 0.8rem;
+        @media(max-width:720px) {
+            display: block;
+        }
+
+        padding: 0%;
+        margin-bottom: 2rem;
+    }
+
+    .card {
+        max-width: 34rem;
+        transition: 300ms;
+        box-shadow: 5px 5px 5px 0 #ccc;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+
+        .card-img-top {
+            height: 14rem;
+            object-fit: cover;
+        }
+    }
+}
+
+#blog {
+    background-image: url('../images/grad3.jpg');
+    background-size: cover;
+
+    .container {
+        padding: 0;
+    }
+
+    .card {        
+        margin: 6rem auto;
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+    
+            .author-insta {
+                height: 1rem;
+                margin-top: -0.2rem;
+            }
+        }
+        
+        .card-image {
+            max-height: 28rem;
+            object-fit: cover;
+        }
+
+        .card-text {
+            text-align: justify;
+        }
+    }
+}
