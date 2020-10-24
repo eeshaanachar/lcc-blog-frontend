@@ -4,6 +4,7 @@
 
 #blog-list .jumbotron {
   background-color: beige;
+  margin-bottom: 0;
 }
 
 #blog-list main {
@@ -13,12 +14,13 @@
       grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   grid-gap: 0.8rem;
   padding: 0%;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
 }
 
 @media (max-width: 720px) {
   #blog-list main {
     display: block;
+    margin: 0;
   }
 }
 
@@ -33,6 +35,12 @@
 #blog-list .card:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
+}
+
+@media (max-width: 720px) {
+  #blog-list .card {
+    margin: 1rem;
+  }
 }
 
 #blog-list .card .card-img-top {
@@ -52,6 +60,12 @@
 
 #blog .card {
   margin: 6rem auto;
+}
+
+@media (max-width: 540px) {
+  #blog .card {
+    margin: 0rem;
+  }
 }
 
 #blog .card .card-header {
@@ -74,6 +88,7 @@
   max-height: 28rem;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 0.1rem;
 }
 
 #blog .card .card-text {
