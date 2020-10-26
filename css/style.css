@@ -3,8 +3,18 @@
 }
 
 #blog-list .jumbotron {
-  background-color: beige;
+  border-radius: 0;
   margin-bottom: 0;
+}
+
+@media (min-width: 580px) {
+  #blog-list .jumbotron {
+    background-image: url("../images/jumbotron_bg.jpg");
+    background-position-x: right;
+    background-position-y: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 
 #blog-list main {
