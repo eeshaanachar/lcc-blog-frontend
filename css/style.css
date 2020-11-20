@@ -1,14 +1,56 @@
-#blog-list .container {
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&display=swap");
+.container {
   padding: 0;
 }
 
-#blog-list .jumbotron {
-  border-radius: 0;
-  margin-bottom: 0;
+nav {
+  background-color: #111;
 }
 
-@media (min-width: 580px) {
-  #blog-list .jumbotron {
+nav img {
+  height: 2.5rem;
+  width: 2.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 0.125rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+nav span {
+  font-family: "Merienda One", cursive;
+  position: relative;
+  top: 0.25rem;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  height: 8rem;
+  width: 100%;
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+}
+
+footer a {
+  font-size: 2rem;
+  color: white;
+  width: 3rem;
+  margin-top: 0.5rem;
+}
+
+.blog-index-page .jumbotron {
+  border-radius: 0;
+}
+
+@media (min-width: 576px) {
+  .blog-index-page .jumbotron {
     background-image: url("../images/jumbotron_bg.jpg");
     background-position-x: right;
     background-position-y: center;
@@ -17,82 +59,75 @@
   }
 }
 
-#blog-list main {
+.blog-index-page main {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(16rem, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  grid-gap: 0.8rem;
-  margin: 1rem auto;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 580px) {
-  #blog-list main {
+@media (max-width: 575.9px) {
+  .blog-index-page main {
     width: 95%;
   }
 }
 
-#blog-list .card {
+.blog-index-page .card {
   -webkit-transition: 300ms;
   transition: 300ms;
   -webkit-box-shadow: 5px 5px 5px 0 #ccc;
           box-shadow: 5px 5px 5px 0 #ccc;
 }
 
-#blog-list .card:hover {
+.blog-index-page .card:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
 }
 
-#blog-list .card .card-img-top {
-  height: 14rem;
+.blog-index-page .card .card-img-top {
+  max-height: 24rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-#blog {
-  background-image: url("../images/grad3.jpg");
-  background-size: cover;
+.blog-article-page {
+  background-color: #222;
+  background-image: radial-gradient(#2a9d8f, #264653, #264653, #111);
 }
 
-#blog .container {
-  padding: 0;
-}
-
-#blog .card {
+.blog-article-page .card {
   margin: 6rem auto;
 }
 
-@media (max-width: 580px) {
-  #blog .card {
+@media (max-width: 575.9px) {
+  .blog-article-page .card {
     border-radius: 0;
     margin: 0rem;
   }
 }
 
-#blog .card .card-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: center;
-      align-content: center;
+.blog-article-page .card h2 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
 }
 
-#blog .card .card-header .author-insta {
-  height: 1rem;
-  margin-top: -0.2rem;
+.blog-article-page .card h3 {
+  font-size: 1.25rem;
 }
 
-#blog .card .card-image {
-  max-height: 28rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-#blog .card .card-text {
+.blog-article-page .card p {
   text-align: justify;
+}
+
+.blog-article-page .card img {
+  max-width: 90%;
+}
+
+@media (min-width: 576px) {
+  .blog-article-page .card img {
+    max-width: 60%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,15 +1,57 @@
-#blog-list {
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&display=swap");
 
-    .container {
-        padding: 0;
+.container {
+    padding: 0;
+}
+
+nav {
+    background-color: #111;
+
+    img {
+        height: 2.5rem;
+        width: 2.5rem;
+        object-fit: contain;
+        padding: 0.125rem;
+        background-color: white;
+        border-radius: 50%;
     }
+
+    span {
+        font-family: "Merienda One", cursive;
+        position: relative;
+        top: 0.25rem;
+    }
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    height: 8rem;
+    width: 100%;
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+
+    a {
+        font-size: 2rem;
+        color: white;
+        width: 3rem;
+        margin-top: 0.5rem;
+    }
+}
+
+.blog-index-page {
 
     .jumbotron {
         border-radius: 0;
-        margin-bottom: 0;
 
-        @media(min-width: 580px) {
-            background-image: url('../images/jumbotron_bg.jpg');
+        @media (min-width: 576px) {
+            background-image: url("../images/jumbotron_bg.jpg");
             background-position-x: right;
             background-position-y: center;
             background-attachment: fixed;
@@ -20,10 +62,10 @@
     main {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-        grid-gap: 0.8rem;
-        margin: 1rem auto;
+        grid-gap: 1rem;
+        margin-bottom: 2rem;
 
-        @media(max-width: 580px) {
+        @media (max-width: 575.9px) {
             width: 95%;
         }
     }
@@ -37,46 +79,43 @@
         }
 
         .card-img-top {
-            height: 14rem;
+            max-height: 24rem;
             object-fit: cover;
         }
     }
 }
 
-#blog {
-    background-image: url('../images/grad3.jpg');
-    background-size: cover;
+.blog-article-page {
+    background-color: #222;
+    background-image: radial-gradient(#2a9d8f, #264653, #264653, #111);
 
-    .container {
-        padding: 0;
-    }
-
-    .card {        
+    .card {
         margin: 6rem auto;
 
-        @media(max-width: 580px) {
+        @media (max-width: 575.9px) {
             border-radius: 0;
             margin: 0rem;
         }
 
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-content: center;
-    
-            .author-insta {
-                height: 1rem;
-                margin-top: -0.2rem;
-            }
-        }
-        
-        .card-image {
-            max-height: 28rem;
-            object-fit: cover;
+        h2 {
+            font-size: 1.75rem;
+            margin-top: 2rem;
         }
 
-        .card-text {
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        p {
             text-align: justify;
+        }
+
+        img {
+            max-width: 90%;
+            
+            @media (min-width: 576px) {
+                max-width: 60%;
+            }            
         }
     }
 }
